@@ -13,6 +13,9 @@ class SettingPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text("Currently no settings are avaliable"),
+            // Todo1: add dark mode
+            // Todo2: add language
+            // Todo3: add about
             const SizedBox(height: 15),
             Container(
               decoration: BoxDecoration(
