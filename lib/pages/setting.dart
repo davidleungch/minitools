@@ -12,7 +12,7 @@ class SettingPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text("Settings"),
+            const Text("Currently no settings are avaliable"),
             const SizedBox(height: 15),
             Container(
               decoration: BoxDecoration(
