@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:minitools/pages/setting.dart';
+import 'package:minitools/pages/fee_spliter/fee_spliter.dart';
 
 const double _kItemExtent = 32.0;
 const List<String> _applications = <String>[
@@ -34,6 +35,18 @@ class _HomePageState extends State<HomePage> {
                 child: child,
               ),
             ));
+  }
+
+  Widget _bodyBuilder(int index) {
+    switch (_applications[index]) {
+      case 'Fee Spliter':
+        return const FeeSpliter();
+      case 'Interest Calculator':
+        return const Center(child: Text('interest_calculator'));
+      case 'Loan Calculator':
+        return const Center(child: Text('loan_calculator'));
+    }
+    return Container();
   }
 
   @override
@@ -100,9 +113,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: Container(
-        color: Colors.white,
-      ),
+        body: _bodyBuilder(_selectedIndex)
     );
   }
 }
